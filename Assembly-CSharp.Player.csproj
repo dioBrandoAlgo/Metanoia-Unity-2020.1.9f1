@@ -60,11 +60,11 @@
     <Compile Include="Assets\Scripts\Player\CameraControl.cs" />
   </ItemGroup>
   <ItemGroup>
-     <None Include="Assets\Art&amp;Animation\Music&amp;SFX\Menu\Music\Test.txt" />
-     <None Include="Assets\Art&amp;Animation\Music&amp;SFX\InGame\SFX\Test.txt" />
-     <None Include="Assets\Art&amp;Animation\Music&amp;SFX\Menu\SFX\Test.txt" />
+     <None Include="Assets\Art&amp;Animation\Music&amp;SFX\SFX\Menu\Music\Test.txt" />
+     <None Include="Assets\Art&amp;Animation\Music&amp;SFX\SFX\InGame\SFX\Test.txt" />
+     <None Include="Assets\Art&amp;Animation\Music&amp;SFX\SFX\Menu\SFX\Test.txt" />
      <None Include="Assets\Prefabs\Test.txt" />
-     <None Include="Assets\Art&amp;Animation\Music&amp;SFX\InGame\Music\Test.txt" />
+     <None Include="Assets\Art&amp;Animation\Music&amp;SFX\SFX\InGame\Music\Test.txt" />
     <Reference Include="UnityEngine">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2020.1.9f1\Editor\Data\PlaybackEngines\WindowsStandaloneSupport\Variations\mono\Managed\UnityEngine.dll</HintPath>
     </Reference>
