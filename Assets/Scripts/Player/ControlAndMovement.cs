@@ -7,6 +7,7 @@ public class ControlAndMovement : MonoBehaviour
 
     /////Public\\\\
     public float movementSpeed = 8f;
+    public int heartBeat = 120;
     public Camera cam;
 
     ////Private\\\\
@@ -14,7 +15,8 @@ public class ControlAndMovement : MonoBehaviour
     private float[] cameraYPos = new float[] {0.70f, 0.69f, 0.68f, 0.67f, 0.66f, 0.65f, 0.64f, 0.63f, 0.62f, 0.61f, 0.60f, 0.61f, 0.62f, 0.63f, 0.64f, 0.65f, 0.66f, 0.67f, 0.68f, 0.69f, 0.70f};
     //CameraYPos Index
     private int cameraIndex = 0;
- 
+   
+
     ////Get Components\\\\
     private CharacterController controller;
 
