@@ -5,15 +5,18 @@ using UnityEngine;
 public class CameraControl : MonoBehaviour
 {
 
+    //Public Variables
     public float mouseSense = 100f;
-
     public Transform player;
 
-    public float XRot = 0f;
+    //Private Variables
+    private float cameraRotation;
 
     // Start is called before the first frame update
     void Start()
     {
+        //Mouse stuck and invisible in the center of the screen
+        //Want to use the mouse? Press Esc and you can see it
         Cursor.lockState = CursorLockMode.Locked;
     }
 
@@ -23,13 +26,12 @@ public class CameraControl : MonoBehaviour
         float mouseX = Input.GetAxis("Mouse X") * mouseSense;
         float mouseY = Input.GetAxis("Mouse Y") * mouseSense;
 
-        XRot -= mouseY;
-        XRot = Mathf.Clamp(XRot, -90f, 45f);
-
-        transform.localRotation = Quaternion.Euler(XRot, 0f, 0f);
-        player.Rotate(Vector3.up * mouseX);
-
+        cameraRotation -= mouseY;
         
+        //cameraRotation, MaxAngle-Y, MaxAngle+Y
+        cameraRotation = Mathf.Clamp(cameraRotation, -90f, 45f);
 
+        transform.localRotation = Quaternion.Euler(cameraRotation, 0f, 0f);
+        player.Rotate(Vector3.up * mouseX);
     }
 }
