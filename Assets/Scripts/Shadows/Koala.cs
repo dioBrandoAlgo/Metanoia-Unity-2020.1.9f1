@@ -8,8 +8,12 @@ public class Koala : MonoBehaviour
     //Public
     public Transform[] waypoints;
     public Transform player;
+    public float attentionTime;
+    public float sleepingTime;
+
     public int waypointIndex;
     public ControlAndMovement controlPlayer;
+
 
     //Private
     public int waypointCountDown;
@@ -48,7 +52,6 @@ public class Koala : MonoBehaviour
                 waypointCountDown += 1;
             }
         }
-
     }
 
     public void Patrol()
@@ -71,7 +74,7 @@ public class Koala : MonoBehaviour
             //Stop Agent
             navMeshAgent.SetDestination(transform.position);
             //Invoke calls for a function after x Amount of time
-            Invoke("Patrol", 5f);
+            Invoke("Patrol", sleepingTime);
             //Restart The Countdown to Sleep
             waypointCountDown = 1;
         }
@@ -84,13 +87,14 @@ public class Koala : MonoBehaviour
     }
 
     
-    private void OnTriggerStay(Collider collider)
+    private void OnTriggerEnter(Collider collider)
     {
         //If sees the player, chase
         if (collider.tag == "Player")
         {
             Chase();
         }
+
 
         //If in lights, be visible
         if (collider.tag == "Lights")
@@ -101,13 +105,13 @@ public class Koala : MonoBehaviour
 
     private void OnTriggerExit(Collider collider)
     {
-        //If stops seeing the player, patrol
+        //If sees the player, chase
         if (collider.tag == "Player")
         {
-            Patrol();
+            Invoke("Patrol", attentionTime);
         }
 
-        //Exit light, turns invisible
+        //If in lights, be NOT visible
         if (collider.tag == "Lights")
         {
             mesh.enabled = false;
