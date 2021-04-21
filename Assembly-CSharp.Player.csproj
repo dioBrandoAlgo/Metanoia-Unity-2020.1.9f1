@@ -55,10 +55,30 @@
     <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio Tools for Unity\16.0\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\AI\State.cs" />
+    <Compile Include="Assets\Scripts\AI\Transition.cs" />
+    <Compile Include="Assets\Scripts\Shadows\Koala.cs" />
     <Compile Include="Assets\Scripts\Player\ControlAndMovement.cs" />
+    <Compile Include="Assets\Scripts\AI\FSM.cs" />
     <Compile Include="Assets\Scripts\Menu\MenuFunctions.cs" />
     <Compile Include="Assets\Scripts\Player\CameraControl.cs" />
-    <Compile Include="Assets\Scripts\Shadows\Koala.cs" />
+    <Compile Include="Assets\Scripts\AI\Action.cs" />
+    <Compile Include="Assets\Scripts\AI\NavMesh.cs" />
+    <Compile Include="Assets\Scripts\AI\Condition.cs" />
+    <Compile Include="Assets\Scripts\AI\Actions\Imaginary Friends\StrollAction.cs" />
+    <Compile Include="Assets\Scripts\AI\Actions\Imaginary Friends\ChatterAction.cs" />
+    <Compile Include="Assets\Scripts\AI\Actions\Shadows\PatrolAction.cs" />
+    <Compile Include="Assets\Scripts\AI\Actions\Shadows\ChaseAction.cs" />
+    <Compile Include="Assets\Scripts\AI\Actions\Shadows\AttackAction.cs" />
+    <Compile Include="Assets\Scripts\AI\Actions\Shadows\SleepAction.cs" />
+    <Compile Include="Assets\Scripts\AI\Actions\Shadows\SearchAction.cs" />
+    <Compile Include="Assets\Scripts\AI\Actions\Shadows\HideAction.cs" />
+    <Compile Include="Assets\Scripts\AI\Conditions\Shadows\CanAttack.cs" />
+    <Compile Include="Assets\Scripts\AI\Conditions\Shadows\PlayerLost.cs" />
+    <Compile Include="Assets\Scripts\AI\Conditions\Shadows\PlayerApproached.cs" />
+    <Compile Include="Assets\Scripts\AI\Conditions\Shadows\Passed3Waypoints.cs" />
+    <Compile Include="Assets\Scripts\AI\Conditions\CanSee.cs" />
+    <Compile Include="Assets\Scripts\AI\Conditions\TimerElapsed.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
