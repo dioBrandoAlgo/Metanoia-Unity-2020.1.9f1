@@ -56,11 +56,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\Items\ItemData.cs" />
+    <Compile Include="Assets\Scripts\UI\In-Game\HeartBeatUI.cs" />
     <Compile Include="Assets\Scripts\Shadows\ShadowKoala.cs" />
     <Compile Include="Assets\Scripts\Player\SelectionRay.cs" />
     <Compile Include="Assets\Scripts\Player\ControlAndMovement.cs" />
-    <Compile Include="Assets\Scripts\ImaginaryFriends\FIFKoala.cs" />
-    <Compile Include="Assets\Scripts\Menu\MenuFunctions.cs" />
+    <Compile Include="Assets\Scripts\ImaginaryFriends\Interactions.cs" />
+    <Compile Include="Assets\Scripts\UI\Menu\MenuFunctions.cs" />
     <Compile Include="Assets\Scripts\Player\CameraControl.cs" />
     <Compile Include="Assets\Scripts\Items\Item.cs" />
   </ItemGroup>
