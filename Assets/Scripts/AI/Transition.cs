@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[CreateAssetMenu(menuName = "Finite State Machine/Transition")]
 public class Transition : ScriptableObject
 {
     // Edirlei's generic code: 

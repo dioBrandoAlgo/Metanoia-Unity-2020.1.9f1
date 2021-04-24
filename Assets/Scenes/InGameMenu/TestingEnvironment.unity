@@ -135,6 +135,7 @@ GameObject:
   - component: {fileID: 258613479}
   - component: {fileID: 258613478}
   - component: {fileID: 258613477}
+  - component: {fileID: 258613480}
   m_Layer: 0
   m_Name: Waypoint (14)
   m_TagString: Untagged
@@ -218,6 +219,21 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 258613475}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &258613480
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 258613475}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dae1963e68b63dc4c99f4879df6cbfc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  links:
+  - {fileID: 756988376}
+  - {fileID: 611756384}
 --- !u!1 &270470194
 GameObject:
   m_ObjectHideFlags: 0
@@ -465,6 +481,7 @@ GameObject:
   - component: {fileID: 611756383}
   - component: {fileID: 611756382}
   - component: {fileID: 611756381}
+  - component: {fileID: 611756384}
   m_Layer: 0
   m_Name: Waypoint (12)
   m_TagString: Untagged
@@ -548,6 +565,20 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 611756379}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &611756384
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 611756379}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dae1963e68b63dc4c99f4879df6cbfc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  links:
+  - {fileID: 258613480}
 --- !u!1 &658905089
 GameObject:
   m_ObjectHideFlags: 0
@@ -749,6 +780,7 @@ GameObject:
   - component: {fileID: 751106745}
   - component: {fileID: 751106750}
   - component: {fileID: 751106749}
+  - component: {fileID: 751106751}
   m_Layer: 0
   m_Name: Capsule
   m_TagString: Untagged
@@ -853,8 +885,14 @@ MonoBehaviour:
   - {fileID: 1486027730}
   - {fileID: 1559476527}
   - {fileID: 764015834}
-  target: {fileID: 1486027730}
+  - {fileID: 756988376}
+  - {fileID: 611756384}
+  - {fileID: 258613480}
   origin: {fileID: 1943523762}
+  timer: 0
+  targets:
+  - {fileID: 764015834}
+  - {fileID: 611756384}
 --- !u!195 &751106750
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -865,11 +903,11 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.5
-  m_Speed: 5
-  m_Acceleration: 8
+  m_Speed: 2
+  m_Acceleration: 5
   avoidancePriority: 50
   m_AngularSpeed: 120
-  m_StoppingDistance: 2
+  m_StoppingDistance: 1
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1
@@ -877,6 +915,20 @@ NavMeshAgent:
   m_BaseOffset: 1
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!114 &751106751
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 751106744}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2cfb29ca37aa2a14f8f5517dfa7294c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  initialState: {fileID: 11400000, guid: 6612c90721e830340b7d21fad7311703, type: 2}
+  currentState: {fileID: 0}
 --- !u!1 &756988371
 GameObject:
   m_ObjectHideFlags: 0
@@ -889,6 +941,7 @@ GameObject:
   - component: {fileID: 756988375}
   - component: {fileID: 756988374}
   - component: {fileID: 756988373}
+  - component: {fileID: 756988376}
   m_Layer: 0
   m_Name: Waypoint (13)
   m_TagString: Untagged
@@ -972,6 +1025,21 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 756988371}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &756988376
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 756988371}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dae1963e68b63dc4c99f4879df6cbfc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  links:
+  - {fileID: 258613480}
+  - {fileID: 764015834}
 --- !u!1 &764015829
 GameObject:
   m_ObjectHideFlags: 0
@@ -1083,6 +1151,7 @@ MonoBehaviour:
   links:
   - {fileID: 1486027730}
   - {fileID: 857750631}
+  - {fileID: 756988376}
 --- !u!1 &776418797
 GameObject:
   m_ObjectHideFlags: 0
@@ -2087,7 +2156,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 8
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!65 &1632130738
 BoxCollider:
