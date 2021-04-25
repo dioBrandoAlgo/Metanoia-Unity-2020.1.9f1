@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{B4273D37-E1C4-6318-F983-7C3889047E4D}</ProjectGuid>
+    <ProjectGuid>{89CB9226-2F2A-BB2C-81BF-B0012E4BA7DA}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Unity.RenderPipelines.Universal.Shaders</AssemblyName>
@@ -675,7 +675,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="UnityEngine.UI.csproj">
-      <Project>{310BEC1B-0B31-539B-0782-4909A05059E6}</Project>
+      <Project>{3576E4EF-8FFC-3677-2497-685B8AB50986}</Project>
       <Name>UnityEngine.UI</Name>
     </ProjectReference>
   </ItemGroup>

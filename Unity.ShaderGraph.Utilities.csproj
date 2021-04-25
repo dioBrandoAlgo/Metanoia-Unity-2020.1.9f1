@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{62D6EF4A-C77C-7C7E-A821-9A542BD14848}</ProjectGuid>
+    <ProjectGuid>{E5213412-7D4C-D228-8A5F-0C867B260215}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Unity.ShaderGraph.Utilities</AssemblyName>
@@ -619,19 +619,19 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="UnityEditor.UI.csproj">
-      <Project>{1453265B-625D-55CE-81E4-DEEF01CD2D63}</Project>
+      <Project>{AD8E67F7-4709-B83A-4A49-29376624119D}</Project>
       <Name>UnityEditor.UI</Name>
     </ProjectReference>
     <ProjectReference Include="UnityEngine.UI.csproj">
-      <Project>{310BEC1B-0B31-539B-0782-4909A05059E6}</Project>
+      <Project>{3576E4EF-8FFC-3677-2497-685B8AB50986}</Project>
       <Name>UnityEngine.UI</Name>
     </ProjectReference>
     <ProjectReference Include="UnityEditor.TestRunner.csproj">
-      <Project>{465503C6-4B8C-0942-33DA-BE141306BB45}</Project>
+      <Project>{FA4D0EF9-E3BB-1296-8E32-3FD0C0CC4155}</Project>
       <Name>UnityEditor.TestRunner</Name>
     </ProjectReference>
     <ProjectReference Include="UnityEngine.TestRunner.csproj">
-      <Project>{0DF473DA-C7E7-A5E3-E314-04A1BDFEB38E}</Project>
+      <Project>{08656E3E-5EEC-2A17-7C92-C4B15CA7E712}</Project>
       <Name>UnityEngine.TestRunner</Name>
     </ProjectReference>
   </ItemGroup>

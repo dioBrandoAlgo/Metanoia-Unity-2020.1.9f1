@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{7E83458C-2F3F-F3D0-4AC9-9F4089873F47}</ProjectGuid>
+    <ProjectGuid>{788C1E6D-6119-1B09-7C1F-213BABBE40AB}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -55,8 +55,13 @@
     <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio Tools for Unity\16.0\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\Shadows\Koala.cs" />
     <Compile Include="Assets\Scripts\Priority Queue\StablePriorityQueueNode.cs" />
+    <Compile Include="Assets\Scripts\AI\Actions\Imaginary Friends\UpdateTargets.cs" />
     <Compile Include="Assets\Scripts\AI\Conditions\Imaginary Friends\StrollToIdle.cs" />
+    <Compile Include="Assets\Scripts\Items\ItemData.cs" />
+    <Compile Include="Assets\Scripts\UI\In-Game\HeartBeatUI.cs" />
+    <Compile Include="Assets\Scripts\AI\Actions\Imaginary Friends\UpdatePathAction.cs" />
     <Compile Include="Assets\Scripts\Priority Queue\GenericPriorityQueue.cs" />
     <Compile Include="Assets\Scripts\AI\State.cs" />
     <Compile Include="Assets\Scripts\AI\Condition.cs" />
@@ -69,15 +74,17 @@
     <Compile Include="Assets\Scripts\AI\Action.cs" />
     <Compile Include="Assets\Scripts\AI\Actions\Shadows\PatrolAction.cs" />
     <Compile Include="Assets\Scripts\Priority Queue\FastPriorityQueue.cs" />
-    <Compile Include="Assets\Scripts\Shadows\Koala.cs" />
+    <Compile Include="Assets\Scripts\Shadows\ShadowKoala.cs" />
     <Compile Include="Assets\Scripts\AI\Conditions\Imaginary Friends\ReachedTarget.cs" />
     <Compile Include="Assets\Scripts\AI\Actions\Imaginary Friends\GoBackAction.cs" />
     <Compile Include="Assets\Scripts\AI\Actions\Imaginary Friends\IdleAction.cs" />
     <Compile Include="Assets\Scripts\AI\Conditions\Imaginary Friends\TimeElapsed.cs" />
+    <Compile Include="Assets\Scripts\Player\SelectionRay.cs" />
     <Compile Include="Assets\Scripts\AI\Conditions\Shadows\PlayerApproached.cs" />
     <Compile Include="Assets\Scripts\Player\ControlAndMovement.cs" />
     <Compile Include="Assets\Scripts\Priority Queue\StablePriorityQueue.cs" />
     <Compile Include="Assets\Scripts\Priority Queue\IFixedSizePriorityQueue.cs" />
+    <Compile Include="Assets\Scripts\ImaginaryFriends\Interactions.cs" />
     <Compile Include="Assets\Scripts\AI\FSM.cs" />
     <Compile Include="Assets\Scripts\Priority Queue\SimplePriorityQueue.cs" />
     <Compile Include="Assets\Scripts\Priority Queue\IPriorityQueue.cs" />
@@ -85,7 +92,7 @@
     <Compile Include="Assets\Scripts\AI\Actions\Shadows\HideAction.cs" />
     <Compile Include="Assets\Scripts\AI\Pathfinding\Pathfinding.cs" />
     <Compile Include="Assets\Scripts\AI\Conditions\Imaginary Friends\OriginReached.cs" />
-    <Compile Include="Assets\Scripts\Menu\MenuFunctions.cs" />
+    <Compile Include="Assets\Scripts\UI\Menu\MenuFunctions.cs" />
     <Compile Include="Assets\Scripts\Player\CameraControl.cs" />
     <Compile Include="Assets\Scripts\AI\Actions\Imaginary Friends\StrollAction.cs" />
     <Compile Include="Assets\Scripts\AI\Actions\Imaginary Friends\ChatterAction.cs" />
@@ -93,11 +100,10 @@
     <Compile Include="Assets\Scripts\AI\Pathfinding\Waypoints.cs" />
     <Compile Include="Assets\Scripts\Priority Queue\FastPriorityQueueNode.cs" />
     <Compile Include="Assets\Scripts\AI\Actions\Shadows\SleepAction.cs" />
+    <Compile Include="Assets\Scripts\Items\Item.cs" />
     <Compile Include="Assets\Scripts\AI\Conditions\Shadows\PlayerLost.cs" />
     <Compile Include="Assets\Scripts\AI\Actions\Shadows\ChaseAction.cs" />
     <Compile Include="Assets\Scripts\AI\Actions\Shadows\AttackAction.cs" />
-    <Compile Include="Assets\Scripts\AI\Actions\Imaginary Friends\UpdatePathAction.cs" />
-    <Compile Include="Assets\Scripts\AI\Actions\Imaginary Friends\UpdateTargets.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
@@ -637,79 +643,79 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Unity.RenderPipeline.Universal.ShaderLibrary.csproj">
-      <Project>{C5ADB03F-A067-72C0-22DB-0806D9B30850}</Project>
+      <Project>{843D6CBE-185D-A132-FEE6-AF399522D5D2}</Project>
       <Name>Unity.RenderPipeline.Universal.ShaderLibrary</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.Timeline.Editor.csproj">
-      <Project>{89ECB4EC-A185-C913-CFBF-471E0F306C7A}</Project>
+      <Project>{C2F61622-5D1F-DCBD-48B7-D372F26ABF53}</Project>
       <Name>Unity.Timeline.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.RenderPipelines.Universal.Shaders.csproj">
-      <Project>{BA40AA87-BFF8-C727-7913-07353A96BA9C}</Project>
+      <Project>{FB96546C-BF31-51B0-9843-7EBF86ACCCA6}</Project>
       <Name>Unity.RenderPipelines.Universal.Shaders</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.VSCode.Editor.csproj">
-      <Project>{00A3A183-C043-71EA-A1A8-6A86ED95E0B9}</Project>
+      <Project>{053F59B8-76F2-9A6B-E000-7D451E4E7A54}</Project>
       <Name>Unity.VSCode.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.RenderPipelines.Core.Editor.csproj">
-      <Project>{C073B20A-5A15-2A2D-C766-74813424921F}</Project>
+      <Project>{90D242D2-1470-5ADA-0DE3-E67419026D0E}</Project>
       <Name>Unity.RenderPipelines.Core.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.RenderPipelines.Core.Runtime.csproj">
-      <Project>{30BD69B1-94FD-1AB1-9D97-83CD04FD37A1}</Project>
+      <Project>{463E8FB8-9389-86DB-7386-B1FE83843422}</Project>
       <Name>Unity.RenderPipelines.Core.Runtime</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.TextMeshPro.Editor.csproj">
-      <Project>{EEE42E06-8815-00F5-9D25-EED87A7E774B}</Project>
+      <Project>{C7729159-A5B7-8DE4-ACD6-AECB7ABDB111}</Project>
       <Name>Unity.TextMeshPro.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.RenderPipelines.Universal.Runtime.csproj">
-      <Project>{629E7DCE-7358-31BE-8236-67C74D0236D7}</Project>
+      <Project>{F1A8F111-A491-E745-CCD3-DA5EC563205F}</Project>
       <Name>Unity.RenderPipelines.Universal.Runtime</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.RenderPipelines.Universal.Editor.csproj">
-      <Project>{EACF7908-407A-2E77-F07E-67379C56412F}</Project>
+      <Project>{543EA90C-F7C9-8228-C8F6-631DEA6875BD}</Project>
       <Name>Unity.RenderPipelines.Universal.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="UnityEngine.UI.csproj">
-      <Project>{310BEC1B-0B31-539B-0782-4909A05059E6}</Project>
+      <Project>{3576E4EF-8FFC-3677-2497-685B8AB50986}</Project>
       <Name>UnityEngine.UI</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.Searcher.Editor.csproj">
-      <Project>{BC5CF645-606E-84E5-52BB-89C3312EABA9}</Project>
+      <Project>{2452044F-8850-762B-8D66-AA9758D06C6A}</Project>
       <Name>Unity.Searcher.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.Timeline.csproj">
-      <Project>{D55E04B6-A4BD-FF4E-3554-E80491545AA9}</Project>
+      <Project>{5D1D8BF5-79A3-29ED-CB23-734A94EB475D}</Project>
       <Name>Unity.Timeline</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.Rider.Editor.csproj">
-      <Project>{48537C19-4898-3C3A-2A98-9BBB705A5157}</Project>
+      <Project>{A790B0D8-500A-4B9F-8D2F-46B8EB35164B}</Project>
       <Name>Unity.Rider.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.csproj">
-      <Project>{5851A899-FDC3-4956-CA9B-C9DB5628B43E}</Project>
+      <Project>{39816C0C-7DF9-6617-3CF4-22EF482338CE}</Project>
       <Name>Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.VisualStudio.Editor.csproj">
-      <Project>{4B780068-E688-7A2F-61EB-2A2AEDB182EC}</Project>
+      <Project>{CD503C5E-169A-8797-CADD-1772C680173A}</Project>
       <Name>Unity.VisualStudio.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.ShaderGraph.Editor.csproj">
-      <Project>{BE9EFA87-49CC-1469-1025-EDC0661089FC}</Project>
+      <Project>{5D4A5E2B-1CB5-1DDC-54E8-A5E3106740D0}</Project>
       <Name>Unity.ShaderGraph.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.RenderPipelines.Core.ShaderLibrary.csproj">
-      <Project>{9BA78EDE-CB4A-F1BF-CACA-40B7B09B7A5B}</Project>
+      <Project>{D9CD638E-974F-256F-FA5D-F15CC5197E7C}</Project>
       <Name>Unity.RenderPipelines.Core.ShaderLibrary</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.TextMeshPro.csproj">
-      <Project>{6F0803A2-BABB-AC68-605A-85C7954CD03C}</Project>
+      <Project>{084F48B9-96B1-6228-7E10-9E0C8CA4F8BB}</Project>
       <Name>Unity.TextMeshPro</Name>
     </ProjectReference>
     <ProjectReference Include="UnityEditor.UI.csproj">
-      <Project>{1453265B-625D-55CE-81E4-DEEF01CD2D63}</Project>
+      <Project>{AD8E67F7-4709-B83A-4A49-29376624119D}</Project>
       <Name>UnityEditor.UI</Name>
     </ProjectReference>
   </ItemGroup>
